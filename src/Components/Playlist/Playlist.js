@@ -1,20 +1,20 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import './Playlist.css'
 
-class ParentClass extends React.Component {
+export class Playlist extends React.Component {
   constructor(props) {
-    super(props);
+  super(props);
+}
 
-    this.state = { totalClicks: 0 };
-  }
-
-  handleClick() {
-    const total = this.state.totalClicks;
-
-    // calling handleClick will 
-    // result in a state change:
-    this.setState(
-      { totalClicks: total + 1 }
+  render() {
+    return (
+        <div class="Playlist">
+        <input value="New Playlist"/>
+        {/* <!-- Add a TrackList component --> */}
+        <button class="Playlist-save">SAVE TO SPOTIFY</button>
+        </div>
     );
   }
 }
+
+export default Playlist;
